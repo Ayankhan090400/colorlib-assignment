@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3 School</title>
+    <!-- <link rel="shortcut icon" href="img/w3.png" type="image/x-icon"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<style>
+    * {
+        margin-top: 0px;
+
+    }
+
+    .navbar {
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        display: flex;
+        /* align-items: center; */
+        justify-content: start;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: medium;
+        background-color: rgb(56, 56, 56);
+    }
+
+    .navbar>h2 {
+        color: white;
+        font-size: 42px;
+        padding-left: 40px;
+
+    }
+
+    .navbar>h4 {
+        color: rgb(119, 119, 119);
+        font-size: 20px;
+        margin-left: 20px;
+        padding-top: 5px;
+
+
+    }
+
+    .span {
+        color: green;
+        font-size: 50px;
+    }
+
+    .img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin-top: 40px;
+        margin-left: 42px;
+
+    }
+
+
+
+
+    .middle {
+        height: 90vh;
+        position: fixed;
+        margin-top: 80px;
+        overflow-y: scroll;
+        width: 22%;
+        margin-left: 80px;
+        border: 1px solid rgb(17, 17, 17);
+        background-color: rgba(211, 205, 205, 0.418);
+        border: none;
+        text-align: center;
+    }
+
+    .div {
+        padding-top: 130px;
+        margin-left: 390px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: capitalize;
+        height: 650px;
+        width: 65%;
+        /* border: 1px solid red; */
+        background-size: cover;
+        background-image: url(img/img_bg_1.jpg.webp);
+
+    }
+
+    .div>h1 {
+        padding-left: 40px;
+        padding-top: 90px;
+        font-size: 60px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .div>p {
+        padding-top: 20px;
+        padding-left: 45px;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+
+    .div>button {
+        margin-left: 50px;
+        width: 100px;
+        padding: 5px;
+        border: none;
+        color: white;
+        background-color: black;
+        border: 1px solid black;
+    }
+
+    .div>button:hover {
+        color: rgb(27, 27, 27);
+        background-color: white;
+
+    }
+
+    .middle>ul {
+        list-style-type: none;
+        text-transform: capitalize;
+        font-size: large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        /* padding-bottom: 50px; */
+    }
+
+    li {
+        padding-bottom: 9px;
+        padding-right: 15px;
+    }
+
+    li:hover {
+        color: rgba(8, 158, 245, 0.712);
+        text-decoration: overline 2px;
+    }
+
+    .middle>h4 {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    .middle>p {
+        font-weight: lighter;
+    }
+
+    .blue {
+        color: rgba(8, 158, 245, 0.712);
+        font-weight: lighter;
+    }
+
+    .red {
+        font-weight: lighter;
+        color: red;
+    }
+
+    .bi {
+        padding-top: 50px;
+        margin-left: 390px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: capitalize;
+        height: 650px;
+        width: 65%;
+    }
+
+    .bi>h6 {
+        padding-left: 50px;
+        color: grey;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        font-size: larger;
+    }
+
+    .bi>h4 {
+        padding-left: 50px;
+        padding-top: 12px;
+        padding-bottom: 50px;
+    }
+
+    .bi>p {
+        padding-left: 50px;
+    }
+
+    .main {
+        margin-top: 110px;
+        margin-left: 50px;
+        margin-bottom: 90px;
+        display: flex;
+    }
+
+    .one {
+        background-color: white;
+        width: 20%;
+        height: 150px;
+        /* padding-right: 10px; */
+        border: 2px solid rgb(250, 247, 247);
+        border-bottom: 4px solid rgb(0, 132, 255);
+        box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.664);
+        border-radius: 20px;
+    }
+
+    .one>h6 {
+        padding-top: 15px;
+        padding-left: 20px;
+    }
+
+    .two {
+        background-color: white;
+        width: 20%;
+        height: 150px;
+        /* padding-right: 10px; */
+        border: 2px solid rgb(250, 247, 247);
+        border-bottom: 4px solid rgb(255, 17, 0);
+        box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.664);
+        border-radius: 20px;
+    }
+
+    .two>h6 {
+        padding-top: 15px;
+        padding-left: 20px;
+    }
+
+    .three {
+        background-color: white;
+        width: 20%;
+        height: 150px;
+        /* padding-right: 10px; */
+        border: 2px solid rgb(250, 247, 247);
+        border-bottom: 4px solid rgba(255, 187, 0, 0.973);
+        box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.664);
+        border-radius: 20px;
+    }
+
+    .three>h6 {
+        padding-top: 15px;
+        padding-left: 20px;
+    }
+
+    .four {
+        background-color: white;
+        width: 20%;
+        height: 150px;
+        padding-right: 10px;
+        border: 2px solid rgb(250, 247, 247);
+        border-bottom: 4px solid rgb(234, 0, 255);
+        box-shadow: 8px 8px 8px 2px rgba(0, 0, 0, 0.664);
+        border-radius: 20px;
+    }
+
+    .four>h6 {
+        padding-top: 15px;
+        padding-left: 20px;
+    }
+
+    .blub {
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 50px;
+    }
+
+    .p {
+
+        padding-left: 50px;
+        margin-left: 50px;
+        padding-top: 10px;
+        width: 80%;
+        height: 100px;
+        background-color: rgba(255, 217, 0, 0.781);
+        font-weight: lighter;
+        font-size: 22px;
+
+    }
+
+    .im {
+        margin-left: 50px;
+        margin-top: 100px;
+        height: 300px;
+        background-image: url(img/cover_bg_1.jpg.webp);
+        /* background-size: fill; */
+        object-fit: cover;
+        background-attachment: fixed;
+        width: 100%;
+    }
+
+    .um {
+        background-color: rgba(0, 0, 0, 0.596);
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        padding-top: 110px;
+        font-weight: lighter;
+        font-family: 'Courier New', Courier, monospacet;
+        font-size: 30px;
+    }
+
+    .am>h6 {
+        padding-top: 50px;
+        padding-left: 50px;
+        color: grey;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        font-size: larger;
+    }
+
+    .am>h4 {
+        padding-left: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-bottom: 40px;
+    }
+
+    .am>p {
+        padding-left: 50px;
+        font-weight: lighter;
+        color: grey;
+    }
+    .gr{
+        padding: 10px;
+    }
+
+</style>
+
+<body>
+    <div class="navbar">
+        <h2 class="">Colorlib<span class="span">.</span> </h2>
+        <h4>+ Jackson</h4>
+<img src="https://img.icons8.com/?size=100&id=cp2ZavhzxUTz&format=png&color=737373" alt="" width="60px" style="margin-left: 780px;" class="nm">
+        <img src="https://img.icons8.com/?size=100&id=03qsmN9A3zlQ&format=png&color=737373" alt="" width="55px">
+        <img src="https://img.icons8.com/?size=100&id=KqV6G325egdQ&format=png&color=FFFFFF" alt="" width="70px" style="background-color: green; height: 70px; " class="gr">
+        <img src="https://img.icons8.com/?size=100&id=VaHFapP3XCAj&format=png&color=737373" alt="" width="55px">
+    </div>
+
+
+
+    <div class="middle">
+        <img src="img/about.jpg.webp" alt="" class="img">
+        <h4>Jackson Ford</h4>
+        <h6><span class="blue">UI/UX/DESIGNER</span> <span class="red">IN PHILLPINES</span></h6><br>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Skills</li>
+            <li>Education</li>
+            <li>Work</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+        <br><br>
+        <p>© Copyright ©2025 All rights reserved | This template is made with by <span class="blue"> Colorlib</span>
+            Demo Images: <span class="blue"> Unsplash.com</span></p>
+    </div>
+    <div class="div">
+        <h1>Hi ! <br> I'm Jackson</h1>
+        <p>100% html5 bootstrap templates Made <br> by <span class="blue">colorlib.com</span></p>
+        <button>Hire Me</button>
+    </div>
+    <div class="bi">
+        <h6>About Us </h6>
+        <h4>Who Am I ?</h4>
+        <p class="red">
+            <strong>Hi I'm Jackson Ford</strong> On her way she met a copy. The copy warned the Little Blind
+            Text, that where it came from it would have been rewritten a thousand times and everything that was left
+            from its origin would be the word "and" and the Little Blind Text should turn around and return to its own,
+            safe country. <br><br>
+
+            Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One
+            day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of
+            Grammar.
+
+        </p>
+        <div class="main gap-5">
+            <div class="one">
+                <img src="https://img.icons8.com/?size=100&id=67474&format=png&color=22C3E6" alt="" class="blub">
+                <h6>Graphic Design</h6>
+            </div>
+            <div class="two">
+                <img src="https://img.icons8.com/?size=100&id=cValMb2bsVIq&format=png&color=FA5252" alt=""
+                    class="blub ">
+                <h6>Web Design</h6>
+            </div>
+            <div class="three">
+                <img src="https://img.icons8.com/?size=100&id=TUxJEZ4PKm7P&format=png&color=FAB005" alt="" class="blub">
+                <h6>Software</h6>
+            </div>
+            <div class="four">
+                <img src="https://img.icons8.com/?size=100&id=85911&format=png&color=C850F2" alt="" class="blub">
+                <h6>Application</h6>
+            </div>
+
+        </div>
+        <div class="p">
+            <p>I am happy to know you <br>
+                that 300+ projects done sucessfully!</p>
+
+        </div>
+        <div class="im">
+            <div class="um">
+                <h2>309 <br><br>Cups Of <br>Coffee</h2>
+                <h2>356 <br><br>Project</h2>
+                <h2>30 <br><br>Client</h2>
+                <h2>10 <br><br>Partners</h2>
+            </div><br><br><br>
+        </div>
+        <div class="am">
+            <h6>My Specialty</h6><br>
+            <h4>My Skills</h4>
+            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks
+                and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her
+                initial into the belt and made herself on the way.</p>
+            <div class=" d-flex w-100">
+                <div class="ps-5 pt-5 w-50">
+                    <h3 class="text-primary fs-5 ">HTML <span style="margin-left: 279px;">90%</span></h3>
+                    <div class="progress  ">
+                        <div class="progress-bar bg-primary" style="width:90%">
+                            <!-- <span>90%</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="ps-5 pt-5 w-50">
+                    <h3 class="text-danger fs-5 ">CSS <span style="margin-left: 300px;">80%</span></h3>
+                    <div class="progress  ">
+                        <div class=" progress-bar bg-danger" style="width:80%">
+                            <!-- <span>80%</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex w-100">
+                <div class="ps-5 pt-5 w-50">
+                    <h3 class="text-warning fs-5 ">JAVASCRIPT <span style="margin-left: 225px;">50%</span></h3>
+                    <div class="progress  ">
+                        <div class="progress-bar bg-warning" style="width:50%">
+                            <!-- <span>50%</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="ps-5 pt-5 w-50">
+                    <h3 class="text-success fs-5 ">React <span style="margin-left: 290px;">60%</span></h3>
+                    <div class="progress  ">
+                        <div class=" progress-bar bg-success" style="width:60%">
+                            <!-- <span>60%</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="ps-5 pt-5 w-50">
+                    <h3 class="text-info fs-5 ">JQUERY <span style="margin-left: 260px;">70%</span></h3>
+                    <div class="progress">
+                        <div class=" progress-bar bg-info" style="width:70%">
+                            <!-- <span>60%</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="ps-5 pt-5 w-50">
+                    <h3 class="text-dark fs-5 ">PHYTHON <span style="margin-left: 240px;">30%</span></h3>
+                    <div class="progress  ">
+                        <div class=" progress-bar bg-dark" style="width:30%">
+                            <!-- <span>30%</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <h3 class="ps-5 ms-3 text-primary mt-2">Contact US</h3>
+                <div class="ms-5 mt-5">
+                    <form action="">
+                        <div class="w-50">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div><br>
+                        <div class="w-75">
+                            <input type="text" class="form-control" placeholder="Email">
+                        </div><br>
+                        <div>
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div><br>
+                        <div>
+                            <textarea name="" class="form-control" id="message" cols="30" rows="7"
+                                placeholder="Message"></textarea>
+                        </div><br>
+                        <div>
+                            <input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+                        </div>
+                    </form>
+                </div><br>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
